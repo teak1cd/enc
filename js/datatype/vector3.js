@@ -18,32 +18,38 @@ vector3.prototype.add = function(x,y,z){
   }
 }
 
-vector3.prototype.sub = function(x,y){
+vector3.prototype.sub = function(x,y,z){
   if(x.type === "vector3"){
     this.x-=x.x;
     this.y-=x.y;
+    this.z-=x.z;
   }else{
     this.x-=x;
     this.y-=y;
+    this.z-=z;
   }
 }
 
-vector3.prototype.mult = function(x,y){
+vector3.prototype.mult = function(x,y,z){
   if(x.type === "vector3"){
     this.x*=x.x;
     this.y*=x.y;
+    this.z*=x.z;
   }else{
     this.x*=x;
     this.y*=y;
+    this.z*=z;
   }
 }
 
-vector3.prototype.div = function(x,y){
+vector3.prototype.div = function(x,y,z){
   if(x.type === "vector3"){
     this.x/=x.x;
     this.y/=x.y;
+    this.z/=x.z;
   }else{
     this.x/=x;
     this.y/=y;
+    this.z/=z;
   }
 }
