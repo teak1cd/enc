@@ -13,7 +13,6 @@ try{
 function __l__(){
   window.dataTypes = {
 "boolean":"boolean",
-"undefined":"undefined",
 "number":"number",
 "array":"array",
 "string":"string",
