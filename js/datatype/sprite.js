@@ -38,5 +38,5 @@ sprite.prototype._tick = function(){
 };
 
 sprite.prototype.getFrame = function(){
- return new frame();
+ return this.frames[this._frame];
 }
