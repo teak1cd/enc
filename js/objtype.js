@@ -7,11 +7,13 @@ try{
   String.prototype.type = "string";//"":string
   Symbol.prototype.type = "symbol";//What is a symbol?
   Object.prototype.type = "object";//object:object
+  window.prototype.type = "window";//DOM window
+  document.prototype.type = "document";//DOM document
 }catch(e){
   console.warn("error: "+e+"\nsome code may not work as expected");
   throw e;
 }
-window._dataTypes = {
+window.prototype.dataTypes = {
 "boolean":"boolean",
 "null":"null",
 "undefined":"undefined",
@@ -20,11 +22,13 @@ window._dataTypes = {
 "string":"string",
 "symbol":"symbol",
 "object":"object",
+"window":"window",
+"document":"document"
 };
 window.getDataTypes = function(data){
   var type = typeof data;
   type = type.toLowerCase();
-  var object = window._dataTypes[type];
+  var object = window.dataTypes[type];
   if(typeof object !== "string"){
     throw new typeError("data type is not as expected"+data);
   }
