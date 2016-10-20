@@ -11,3 +11,4 @@ function require(object){
   }
   return false;
 }
+require.prototype.type="require";
