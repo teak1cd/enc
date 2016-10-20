@@ -10,3 +10,4 @@ function renderObject(pos,sprite){
     throw new typeError();
   }
 }
+renderObject.prototype.type="renderObject";
